@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd"
+            xmlns:m="http://ant.apache.org/ivy/maven">
+  <info organisation="ekahau" module="lab" status="integration" />
+  
+  <configurations>
+    <conf name="compile" description="Production dependencies"/>
+    <conf name="test" description="Dependencies used for running tests"/>
+    <conf name="sources" description="Source code"/>
+  </configurations>
+  
+  <dependencies>
+   <dependency org="junit" name="junit" rev="4.12" conf="test->default"/>
+   <dependency org="log4j" name="log4j" rev="1.2.17" conf="compile->default"/>
+    <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+	<dependency org="com.google.code.gson" name="gson" rev="2.8.5"/>
+	<dependency org="org.projectlombok" name="lombok" rev="1.18.0"/>
+  </dependencies>
+  </ivy-module>
